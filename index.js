@@ -10,9 +10,8 @@ app.all('/*', function (req, res, next) {
 });
 app.get("/getOverlayLayerDetails", (req, res, next) => {
     var layerdetails = [
-        { layername: "Name 1", url: "http://www.google.com" },
-        { layername: "Name 1", url: "http://www.google.com" },
-        { layername: "Name 1", url: "http://www.google.com" }
+        { url: "http://sedac.ciesin.columbia.edu/geoserver/wms",layername: "gpw-v4:gpw-v4-population-density_2015", displayname:"Population Density" },
+        { url: "http://sedac.ciesin.columbia.edu/geoserver/wms",layername: "lulc:lulc-global-grid-prob-urban-expansion-2030", displayname:"Urban Expansion" },
     ];
     res.json(layerdetails);
 });
